@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>demo12</title>
+	<meta charset="utf-8">
+</head>
+<body onload="draw()">
+	<canvas id="can"></canvas>
+</body>
+	<script type="text/javascript">
+		function draw() {
+			var canvas = document.getElementById('can');
+			var ctx = canvas.getContext('2d');
+
+			var rectangle = new Path2D();//  新建一个Path2d对象
+
+			rectangle.rect(10,10,50,50);
+
+			var circle = new Path2D();// 又新建了一个Path2d对象
+
+			circle.moveTo(125,35);
+			circle.arc(100,35,25,0,2*Math.PI);
+
+			ctx.stroke(rectangle)
+			ctx.fill(circle)
+		}
+	</script>
+</html>

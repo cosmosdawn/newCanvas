@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>demo16</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		canvas{
+			background: #ddd;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="can" width="600" height="300"></canvas>
+</body>
+	<script type="text/javascript">
+		var canvas = document.getElementById('can');
+		var ctx = canvas.getContext('2d');
+
+		ctx.font = '38pt Arial';
+		ctx.fillStyle = 'cornflowerblue';
+		ctx.strokeStyle = 'blue';
+		ctx.fillText('xiaoyu',canvas.width/2 -150,canvas.height/2 + 15);
+		ctx.strokeText('xiaoyu',canvas.width/2 -150,canvas.height/2 + 15);
+	</script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>demo04</title>
+	<meta charset="utf-8">
+</head>
+<body onload="draw()">
+	<canvas id="can"></canvas>
+</body>
+	<script type="text/javascript">
+		function draw() {
+			var canvas = document.getElementById('can');
+			if(canvas.getContext){
+				var ctx = canvas.getContext('2d')
+				ctx.beginPath();
+				ctx.arc(75,75,50,0,Math.PI*2,true)
+				ctx.moveTo(110,75)
+				ctx.arc(75,75,35,0,Math.PI,false)
+				ctx.moveTo(65,65)
+				ctx.arc(60,65,5,0,Math.PI*2,true)
+				ctx.moveTo(95,65)
+				ctx.arc(90,65,5,0,Math.PI*2,true)
+				ctx.stroke()
+			}
+		}
+	</script>
+</html>
+<!-- 
+	lineTo(x,y)函数，绘制一条从当前位置到指定x y位置的直线。开始点和之前绘制的路径有关，之前路径的结束点就是接下来的开始点。也可以通过moveTo()函数来改变初始点点位置。
+ -->

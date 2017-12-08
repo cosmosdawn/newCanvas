@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>demo03</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		canvas{
+			border: 1px solid black;
+		}
+	</style>
+</head>
+<body onload="draw()">
+			<canvas id="can"></canvas>
+</body>
+	<script type="text/javascript">
+		function draw() {
+			var canvas = document.getElementById('can');
+			if(canvas.getContext){
+				var ctx = canvas.getContext('2d');
+				ctx.beginPath();     //开始一个路径
+				ctx.moveTo(75,50);
+				ctx.lineTo(100,75);
+				ctx.lineTo(100,25);
+				ctx.fill();			//自动闭合路径
+			}
+		}
+	</script>
+</html>
+<!-- 当你调用fill()函数时，所有没有闭合的形状都会自动闭合，所以你不需要调用closePath()函数。但是调用stroke()时不会自动闭合。 -->
+<!-- moveTo(x,y) 函数，将笔触移动到指定的坐标x y上，一般当canvas初始化或者beginPath()调用之后，通常会使用moveTo()函数设置起点；或者使用它来绘制不连续的路径 -->

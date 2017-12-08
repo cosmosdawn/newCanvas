@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>demo13</title>
+	<meta charset="utf-8">
+</head>
+<body onload="draw()">
+	<canvas id="can"></canvas>
+</body>
+	<script type="text/javascript">
+		function draw() {
+			var canvas = document.getElementById('can');
+			var ctx = canvas.getContext('2d');
+
+			var p = new Path2D("M10 10 h 80 v 80 h -80 z")
+
+			//ctx.fill(p)
+			ctx.stroke(p)
+		}
+	</script>
+</html>

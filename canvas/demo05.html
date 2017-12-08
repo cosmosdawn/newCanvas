@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>demo05</title>
+	<meta charset="utf-8">
+</head>
+<body onload="draw()">
+	<canvas id="can"></canvas>
+</body>
+	<script type="text/javascript">
+		function draw() {
+			var canvas = document.getElementById('can')
+			var ctx = canvas.getContext('2d')
+			ctx.beginPath();
+			ctx.moveTo(25,25);
+			ctx.lineTo(105,25);
+			ctx.lineTo(25,105);
+			ctx.fill();					//填充三角形
+
+
+			ctx.beginPath();    //再开启一个路径
+			ctx.moveTo(125,125);
+			ctx.lineTo(125,45);
+			ctx.lineTo(45,125);
+			ctx.closePath();		// 因为stroke不会自定闭合路径所以手动闭合路径
+			ctx.stroke();	// 绘制描边三角形
+		}
+	</script>
+</html>

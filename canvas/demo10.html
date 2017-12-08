@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>demo10</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		canvas{
+			border: 1px solid black;
+		}
+	</style>
+</head>
+<body onload="draw()">
+	<canvas id="can"></canvas>
+</body>
+	<script type="text/javascript">
+		function draw(){
+			var canvas = document.getElementById('can');
+			var ctx = canvas.getContext('2d');
+
+			ctx.rect(50,50,50,50)
+			ctx.stroke()
+		}
+	</script>
+</html>
+
+<!-- 直接在画布上绘制矩形 rect()方法--将一个矩形路径增加到当前路径上 -->
+
+<!--  rect(x,y,width,height)绘制一个 左上角坐标是x,y宽高是 width 和height的矩形-->
